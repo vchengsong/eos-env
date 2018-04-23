@@ -1,6 +1,6 @@
 
 地区  |   bp_name     |   角色
-华北  	eoshuabei		 boot
+华北  	eoshuabei		 boot keosd
 华东  	eoshuadong
 华南  	eoshuanan
 香港  	eostore
@@ -8,22 +8,7 @@
 新加坡  	eostore
 
 
-#### config.ini关键项
-```
-genesis-json = /opt/eosio/bin/data-dir/genesis.json     #非BIOS节点不需要此
-http-server-address = 0.0.0.0:8888
-p2p-listen-endpoint = 0.0.0.0:9876
-agent-name = "EOS Test Agent"
-p2p-peer-address =
-producer-name =
-private-key = ["EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV","5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"]
-
-plugin = eosio::producer_plugin
-plugin = eosio::chain_api_plugin
-plugin = eosio::wallet_api_plugin
-plugin = eosio::account_history_api_plugin
-plugin = eosio::http_plugin
-```
+注意：每个云上的虚机都要开启入方向的9876端口(9876/9876 0.0.0.0/0)，才能正常工作
 
 #### 华北 启动节点 eosio
 ```
@@ -96,4 +81,6 @@ Step 2:
 {\"producer_name\": \"eostore\",\"block_signing_key\": \"EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk\"} \
 ]}" -p eosio@active
 
+
+# cleos get info  # 观察区块生产者
 ```
