@@ -69,7 +69,7 @@ Step 6:新建用户
 
 ```  
     
-东京节点
+东京、香港、新加坡节点
 ```
 Step 1:
 # mkdir -p /eos/data && mkdir -p /eos/blockchain && mkdir -p /eos/wallet
@@ -88,5 +88,12 @@ Step 2:
 # docker logs -f nodeos
 ```  
     
+激活BP
+```
+# cleos push action eosio setprods \
+"{ \"version\": 1, \"producers\": [ \
+{\"producer_name\": \"eosio\",\"block_signing_key\": \"EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV\"}, \
+{\"producer_name\": \"eostore\",\"block_signing_key\": \"EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk\"} \
+]}" -p eosio@active
 
-
+```
