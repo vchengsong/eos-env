@@ -1,17 +1,11 @@
 
-
-测试
-
-
-地区   bp_name     角色   
-
-华北  	eoshuabei		boot
+地区  |   bp_name     |   角色
+华北  	eoshuabei		 boot
 华东  	eoshuadong
 华南  	eoshuanan
 香港  	eostore
 东京  	eostore
 新加坡  	eostore
-
 
 
 #### config.ini关键项
@@ -92,12 +86,6 @@ Step 2:
     --p2p-peer-address 47.104.242.13:9876 \
     --private-key [\"EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk\",\"5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC\"]
 # docker logs -f nodeos
-
-
-
-nodeos --producer-name inita --plugin eosio::chain_api_plugin --plugin eosio::net_api_plugin --http-server-address 127.0.0.1:8889 --p2p-listen-endpoint 127.0.0.1:9877  --config-dir node2 --data-dir node2 --private-key [\"EOS6hMjoWRF2L8x9YpeqtUEcsDKAyxSuM1APicxgRU1E3oyV5sDEg\",\"5JgbL2ZnoEAhTudReWH1RnMuQS6DBeLZt4ucV6t8aymVEuYg7sr\"]
-
-
 ```  
     
 
