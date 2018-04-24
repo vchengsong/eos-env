@@ -69,6 +69,7 @@ Step 2:
     --plugin eosio::chain_api_plugin \
     --plugin eosio::net_api_plugin \
     --p2p-peer-address 47.104.242.13:9876 \
+    --http-server-address 0.0.0.0:8888 \
     --private-key [\"EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk\",\"5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC\"]
     说明：如果提示错误，需要为nodeos命令添加参数 --resync，告诉nodeos重新同步脚本，如果链数据很多，要非常谨慎使用该选项，因为会非常耗时。
 # docker logs -f nodeos
@@ -85,3 +86,4 @@ Step 2:
 
 # cleos get info  # 观察区块生产者
 ```
+
