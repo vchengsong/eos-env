@@ -1,0 +1,17 @@
+
+
+user1
+Private key: 5Kc4kYKiDMHdamai8QHcZ7jTUN5JvbLQJMZTSGtsEPXrZRqypnM
+Public key: EOS6FhDpkkBmZPBrANjfU7z8rBDgm8xwaYLAg8qBsLYR2AG25APcb
+
+user2
+Private key: 5KZeRRaMw5QpWvwSpRxCK1ib3UyqZaQ6mDLdmJRZMvuQk72P6KJ
+Public key: EOS5JaXkrizggfLXoQ5qACvZJVCheJdR3ipKJk6pnF7o5N5uaseMP
+
+user3
+Private key: 5JiUe8J3mVxut5djhCFtysVUFhUV1LJcDzPjB16j3D48AXfbz2D
+Public key: EOS7waz27CKeMY6KVREJVjn8PY9WP23G6h77hKu4J5ZXSecj5iTAp
+
+eosio.token
+Private key: 5JQKEf9ZVTAGt29KWqdfww8Mr65NUNQ7Y9S2zaomNa7Q3BtnwB4
+Public key: EOS6LuHe5T9GcXP4ZbDND1z1yp6qU3uw84AhU6ohYUWExTmgBZEGW
