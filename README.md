@@ -64,12 +64,13 @@ Step 2:
     -p 8888:8888 -p 9876:9876 \
     -v /eos/data:/opt/eosio/bin/data-dir \
     -v /eos/blockchain:/root/.local/share/eosio/nodeos/data \
-    eosio/eos nodeos --resync \
+    eosio/eos nodeos \
     --producer-name eostore \
     --plugin eosio::chain_api_plugin \
     --plugin eosio::net_api_plugin \
     --p2p-peer-address 47.104.242.13:9876 \
     --private-key [\"EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk\",\"5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC\"]
+    说明：如果提示错误，需要为nodeos命令添加参数 --resync，告诉nodeos重新同步脚本，如果链数据很多，要非常谨慎使用该选项，因为会非常耗时。
 # docker logs -f nodeos
 ```  
     
