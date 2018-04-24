@@ -20,6 +20,7 @@ Step 2:
     -p 8888:8888 -p 9876:9876 \
     -v /eos/data:/opt/eosio/bin/data-dir \
     -v /eos/blockchain:/root/.local/share/eosio/nodeos/data \
+    --http-server-address 0.0.0.0:8888 \
     eosio/eos nodeosd.sh --enable-stale-production --producer-name eosio --plugin eosio::chain_api_plugin --plugin eosio::net_api_plugin
 # docker logs -f nodeos
 
