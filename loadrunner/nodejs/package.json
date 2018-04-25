@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "async": "^2.6.0",
     "eosjs": "^8.0.0"
   },
   "devDependencies": {},
