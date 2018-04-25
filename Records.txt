@@ -2,17 +2,29 @@
 default wallet password
 "PW5HwSd3zQskKMSFGE88kGvbieAWf4ZE5BMupW88F2SDWSMnL9TSd"
 
-华北
+节点1
 Private key: 5Hpv9p4krLHRfzMaRtiP2wUuSJx5QErPx1xyVWRddTCDkemH5kK
 Public key: EOS6LQ6sGUDNYH35opPHwA1sdw8rjtN9s1ZpF1zA8mgHZQ2xoAgk8
 
-华东
+节点2
 Private key: 5JtRPPPceNvu1hCkXXoANxtCL3VJK1mYNqy82xJTHpvYRPK5dJm
 Public key: EOS6PGpv1vuLrsDxwjrz7cU47ueKz3twp4Et48qJoPFux2Z6y7bDZ
 
-华南
+节点3
 Private key: 5HvZaSEkvwsWPa11sD7FbEdjiHodo7BvG75c7v9NYHj458hhaLy
 Public key: EOS7Gn3L4Pf7oUgqdaXPKg7SEDAkxiYNntmf83CGHS1Bq5sZfpcft
+
+
+
+
+
+
+
+
+
+
+
+
 
 EOSTORE
 Private key: 5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC
