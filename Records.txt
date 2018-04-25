@@ -2,33 +2,44 @@
 default wallet password
 "PW5HwSd3zQskKMSFGE88kGvbieAWf4ZE5BMupW88F2SDWSMnL9TSd"
 
-节点1
+eosbp1
 Private key: 5Hpv9p4krLHRfzMaRtiP2wUuSJx5QErPx1xyVWRddTCDkemH5kK
 Public key: EOS6LQ6sGUDNYH35opPHwA1sdw8rjtN9s1ZpF1zA8mgHZQ2xoAgk8
 
-节点2
+eosbp2
 Private key: 5JtRPPPceNvu1hCkXXoANxtCL3VJK1mYNqy82xJTHpvYRPK5dJm
 Public key: EOS6PGpv1vuLrsDxwjrz7cU47ueKz3twp4Et48qJoPFux2Z6y7bDZ
 
-节点3
+eosbp3
 Private key: 5HvZaSEkvwsWPa11sD7FbEdjiHodo7BvG75c7v9NYHj458hhaLy
 Public key: EOS7Gn3L4Pf7oUgqdaXPKg7SEDAkxiYNntmf83CGHS1Bq5sZfpcft
 
+eosbp4
+Private key: 5JoGyPJwmqubeGcxhavL8mvF2EchHztaN9PvPUPjv3JRjTPUXV4
+Public key: EOS7AiMrgd2d9nDK7cFk4JbJH14UWb8EHTbYGZig1tJzTANa7zEAH
+
+eosbp5
+Private key: 5JHdqY4H4rBuAFMcpHP7SE8PjwV2N3c1SuAoKyxNSmyqsfAR6fG
+Public key: EOS6CbwnyzEmMvEXkHgScE7poZRBhM68Ls5Wf5gunhwo5uWMqXs8q
+
+eosbp6
+Private key: 5KPX51GaCTJF6D28L9MXH4Ct8QgA1jm2KxNb1b4ALV9w2d6JywL
+Public key: EOS7SG6NNg3jeVJdqEeV2RACEiruW5AFEZx4ChCmDGSYdB56Jrsdc
+
+eosbp7
+Private key: 5HtdWjARtxWcjidGPRHmerAjg7pTB7Go3TctiBWebsKjrVTwYYy
+Public key: EOS7Xpa3YCn8YQmCpabGc3L2ungqaqaQkrwDDDvP6ExebDAC25Agd
+
+eosbp8
+Private key: 5J9jJLpXMADMYZji6z7yybXe8m7PfN4ueJotB7eoZYvUKbekvzs
+Public key: EOS5Gv4CbXFBwdvn7vm8Qh6J4X2xZnph1DmQMbFfXofhP8zzfS4Q7
 
 
 
-
-
-
-
-
-
-
-
-
-EOSTORE
+eostore
 Private key: 5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC
 Public key: EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk
+
 
 
 eosio

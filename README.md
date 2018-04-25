@@ -20,49 +20,56 @@ mkdir -p /data/eos/data && mkdir -p /data/eos/blockchain && mkdir -p /data/eos/w
 #### 华北 启动节点 eosio
 ```
 Step 1:
-# docker run -d --restart=always --name nodeos \
+docker run -d --restart=always --name nodeos \
     -p 8888:8888 -p 9876:9876 \
     -v /data/eos/data:/opt/eosio/bin/data-dir \
     -v /data/eos/blockchain:/root/.local/share/eosio/nodeos/data \
     --http-server-address 0.0.0.0:8888 \
     eosio/eos nodeosd.sh --enable-stale-production --producer-name eosio --plugin eosio::chain_api_plugin --plugin eosio::net_api_plugin
-# docker logs -f nodeos
+docker logs -f nodeos
 
 Step 2:
-# docker run -d --restart=always --name keosd --link nodeos \
+docker run -d --restart=always --name keosd --link nodeos \
     -v /data/eos/wallet:/root/eosio-wallet \
     -v /data/eos/data:/opt/eosio/bin/data-dir \
     eosio/eos keosd
-# alias cleos='docker exec keosd cleos -H nodeos'
-# cleos get info
+alias cleos='docker exec keosd cleos -H nodeos'
+cleos get info
 
 Step 3:     
-# cleos wallet create       # 之后将钱包password记录在Records.txt
+cleos wallet create       # 之后将钱包password记录在Records.txt
 说明:必须先创建wallet(default)，并且包含了eosio的私钥和公钥。
 
 Step 4:
-# cleos set contract eosio /opt/eosio/bin/data-dir/contracts/eosio.bios
+cleos set contract eosio /opt/eosio/bin/data-dir/contracts/eosio.bios
 
 Step 5:新建用户
-# cleos create key          # 执行多次 之后将钱包password记录在Records.txt
+#### cleos create key          # 执行多次 之后将钱包password记录在Records.txt
 
-# cleos wallet import 5Hpv9p4krLHRfzMaRtiP2wUuSJx5QErPx1xyVWRddTCDkemH5kK
-# cleos wallet import 5JtRPPPceNvu1hCkXXoANxtCL3VJK1mYNqy82xJTHpvYRPK5dJm
-# cleos wallet import 5HvZaSEkvwsWPa11sD7FbEdjiHodo7BvG75c7v9NYHj458hhaLy
-# cleos wallet import 5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC
+cleos wallet import 5Hpv9p4krLHRfzMaRtiP2wUuSJx5QErPx1xyVWRddTCDkemH5kK      #eosbp1
+cleos wallet import 5JtRPPPceNvu1hCkXXoANxtCL3VJK1mYNqy82xJTHpvYRPK5dJm      #eosbp2
+cleos wallet import 5HvZaSEkvwsWPa11sD7FbEdjiHodo7BvG75c7v9NYHj458hhaLy      #eosbp3
+cleos wallet import 5JoGyPJwmqubeGcxhavL8mvF2EchHztaN9PvPUPjv3JRjTPUXV4      #eosbp4
+cleos wallet import 5JHdqY4H4rBuAFMcpHP7SE8PjwV2N3c1SuAoKyxNSmyqsfAR6fG      #eosbp5
+cleos wallet import 5KPX51GaCTJF6D28L9MXH4Ct8QgA1jm2KxNb1b4ALV9w2d6JywL      #eosbp6
 
+cleos wallet import 5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC      #eostore
 
-# cleos create account eosio eoshuabei EOS6LQ6sGUDNYH35opPHwA1sdw8rjtN9s1ZpF1zA8mgHZQ2xoAgk8 EOS6LQ6sGUDNYH35opPHwA1sdw8rjtN9s1ZpF1zA8mgHZQ2xoAgk8
-# cleos create account eosio eoshuadong EOS6PGpv1vuLrsDxwjrz7cU47ueKz3twp4Et48qJoPFux2Z6y7bDZ EOS6PGpv1vuLrsDxwjrz7cU47ueKz3twp4Et48qJoPFux2Z6y7bDZ
-# cleos create account eosio eoshuanan EOS7Gn3L4Pf7oUgqdaXPKg7SEDAkxiYNntmf83CGHS1Bq5sZfpcft EOS7Gn3L4Pf7oUgqdaXPKg7SEDAkxiYNntmf83CGHS1Bq5sZfpcft
-# cleos create account eosio eostore EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk 
+cleos create account eosio eosbp1 EOS6LQ6sGUDNYH35opPHwA1sdw8rjtN9s1ZpF1zA8mgHZQ2xoAgk8 EOS6LQ6sGUDNYH35opPHwA1sdw8rjtN9s1ZpF1zA8mgHZQ2xoAgk8
+cleos create account eosio eosbp2 EOS6PGpv1vuLrsDxwjrz7cU47ueKz3twp4Et48qJoPFux2Z6y7bDZ EOS6PGpv1vuLrsDxwjrz7cU47ueKz3twp4Et48qJoPFux2Z6y7bDZ
+cleos create account eosio eosbp3 EOS7Gn3L4Pf7oUgqdaXPKg7SEDAkxiYNntmf83CGHS1Bq5sZfpcft EOS7Gn3L4Pf7oUgqdaXPKg7SEDAkxiYNntmf83CGHS1Bq5sZfpcft
+cleos create account eosio eosbp4 EOS7AiMrgd2d9nDK7cFk4JbJH14UWb8EHTbYGZig1tJzTANa7zEAH EOS7AiMrgd2d9nDK7cFk4JbJH14UWb8EHTbYGZig1tJzTANa7zEAH
+cleos create account eosio eosbp5 EOS6CbwnyzEmMvEXkHgScE7poZRBhM68Ls5Wf5gunhwo5uWMqXs8q EOS6CbwnyzEmMvEXkHgScE7poZRBhM68Ls5Wf5gunhwo5uWMqXs8q
+cleos create account eosio eosbp6 EOS7SG6NNg3jeVJdqEeV2RACEiruW5AFEZx4ChCmDGSYdB56Jrsdc EOS7SG6NNg3jeVJdqEeV2RACEiruW5AFEZx4ChCmDGSYdB56Jrsdc
+
+cleos create account eosio eostore EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk 
 
 ```  
     
 东京、香港、新加坡节点
 ```
 Step 1:
-# docker run -d --restart=always --name nodeos \
+docker run -d --restart=always --name nodeos \
     -p 8888:8888 -p 9876:9876 \
     -v /data/eos/data:/opt/eosio/bin/data-dir \
     -v /data/eos/blockchain:/root/.local/share/eosio/nodeos/data \
@@ -74,19 +81,19 @@ Step 1:
     --http-server-address 0.0.0.0:8888 \
     --private-key [\"EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk\",\"5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC\"]
     说明：如果提示错误，需要为nodeos命令添加参数 --resync，告诉nodeos重新同步脚本，如果链数据很多，要非常谨慎使用该选项，因为会非常耗时。
-# docker logs -f nodeos
+docker logs -f nodeos
 ```  
     
     
 激活BP
 ```
-# cleos push action eosio setprods \
+cleos push action eosio setprods \
 "{ \"version\": 1, \"producers\": [ \
 {\"producer_name\": \"eosio\",\"block_signing_key\": \"EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV\"}, \
 {\"producer_name\": \"eostore\",\"block_signing_key\": \"EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk\"} \
 ]}" -p eosio@active
 
 
-# cleos get info  # 观察区块生产者
+cleos get info  # 观察区块生产者
 ```
 
