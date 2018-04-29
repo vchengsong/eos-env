@@ -3,7 +3,7 @@
 
 #### 操作系统初始化安装
 ```
-yum -y install docker git nodejs
+yum -y install docker git nodejs screen tree
 systemctl enable docker && systemctl start docker && docker pull eosio/eos
 mkdir -p /data/eos/data && mkdir -p /data/eos/blockchain && mkdir -p /data/eos/wallet
 ```
@@ -63,8 +63,13 @@ cleos create account eosio eostore EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK
 
 #### 其他节点
 ```
+
+echo "alias cleos='docker exec nodeos cleos'" >> ~/.bashrc && . ~/.bashrc
+
+
 # Step 1:
 p2p_peer_address=47.104.242.13:9876
+p2p_peer_address=13.230.91.225:9876
 
 # Step 2:
 #eosbp1
@@ -108,9 +113,10 @@ docker run -d --restart=always --name nodeos \
     --http-server-address 0.0.0.0:8888 \
     --private-key [\"${public_key}\",\"${private_key}\"]
 
-说明：如果提示错误，需要为nodeos命令添加参数 --resync，告诉nodeos重新同步脚本，如果链数据很多，要非常谨慎使用该选项，因为会非常耗时。
+#说明：如果提示错误，需要为nodeos命令添加参数 --resync，告诉nodeos重新同步脚本，如果链数据很多，要非常谨慎使用该选项，因为会非常耗时。
     
 docker logs -f nodeos
+
 ```  
 
 

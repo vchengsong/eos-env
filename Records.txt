@@ -1,6 +1,6 @@
 
 default wallet password
-"PW5JBQqnt4RJk24ebETkzekupt3Qmz1dsoMNCMUL5Fq3oAoufZkKN"
+"PW5JuXg3YjAeePuYKhdRRMEFfRkKDf8b9T5tiRyXBZTXruXJ5QVc1"
 
 eosbp1
 Private key: 5Hpv9p4krLHRfzMaRtiP2wUuSJx5QErPx1xyVWRddTCDkemH5kK
