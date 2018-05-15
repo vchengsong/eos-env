@@ -44,7 +44,7 @@ Private key: 5J9jJLpXMADMYZji6z7yybXe8m7PfN4ueJotB7eoZYvUKbekvzs
 Public key: EOS5Gv4CbXFBwdvn7vm8Qh6J4X2xZnph1DmQMbFfXofhP8zzfS4Q7
 
 
-eostore
+eosstore
 Private key: 5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC
 Public key: EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk
 
@@ -55,3 +55,12 @@ Public key: EOS6LuHe5T9GcXP4ZbDND1z1yp6qU3uw84AhU6ohYUWExTmgBZEGW
 
 eosio
 private-key = ["EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV","5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"]
+
+
+voter1
+Private key: 5KQot2gvQGfzb3QqBXGpyNgzqVxUgTYJwJ9tymHamdh9nLrQQUg
+Public key: EOS5LtzLC7pU7HH16DZvnD5sbp2KdTX1HQ8usgx4qucx4rzRk6U79
+
+voter2
+Private key: 5JCKMJLkUcfLLdd7X6Ketm9WBuU2yZzsTzD2ENCWE1zh9XSMn5B
+Public key: EOS8PvjvhimDWFyH1py4mgvnLBkRi2533RSCUxRZkhZaX3bFRifLj

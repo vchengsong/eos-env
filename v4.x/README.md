@@ -18,7 +18,7 @@ docker cp tmp:/opt/eosio/bin  eosio
 
 # 在相应主机上创建eosio目录，然后cp到对应的主机
 ssh song@172.16.182.133 mkdir ~/eosio
-scp -r eosio/bin/* song@172.16.182.133:~/eosio
+scp -r -P 22 eosio/bin/* song@172.16.182.133:~/eosio 
 
 # 进入各个主机将程序cp到执行目录
 sudo cp -r ~/eosio/* /usr/local/bin
@@ -45,7 +45,6 @@ cleos wallet create       # 之后将钱包password记录在Records.txt
 
 Step 4:
 cleos set contract eosio /usr/local/bin/data-dir/contracts/eosio.bios
-cleos set contract eosio /usr/local/bin/data-dir/contracts/eosio.system
 
 Step 5:新建用户
 #### cleos create key          # 执行多次 之后将钱包password记录在Records.txt
@@ -58,8 +57,9 @@ cleos wallet import 5JHdqY4H4rBuAFMcpHP7SE8PjwV2N3c1SuAoKyxNSmyqsfAR6fG      #eo
 cleos wallet import 5KPX51GaCTJF6D28L9MXH4Ct8QgA1jm2KxNb1b4ALV9w2d6JywL      #eosbp11
 cleos wallet import 5HtdWjARtxWcjidGPRHmerAjg7pTB7Go3TctiBWebsKjrVTwYYy      #eosbp12
 cleos wallet import 5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC      #eosstore
-cleos wallet import 5JQKEf9ZVTAGt29KWqdfww8Mr65NUNQ7Y9S2zaomNa7Q3BtnwB4      #eos.token
-
+cleos wallet import 5JQKEf9ZVTAGt29KWqdfww8Mr65NUNQ7Y9S2zaomNa7Q3BtnwB4      #eosio.token
+cleos wallet import 5KQot2gvQGfzb3QqBXGpyNgzqVxUgTYJwJ9tymHamdh9nLrQQUg      #voter1
+cleos wallet import 5JCKMJLkUcfLLdd7X6Ketm9WBuU2yZzsTzD2ENCWE1zh9XSMn5B      #voter2
 
 cleos create account eosio eosbp1 EOS6LQ6sGUDNYH35opPHwA1sdw8rjtN9s1ZpF1zA8mgHZQ2xoAgk8 EOS6LQ6sGUDNYH35opPHwA1sdw8rjtN9s1ZpF1zA8mgHZQ2xoAgk8
 cleos create account eosio eosbp2 EOS6PGpv1vuLrsDxwjrz7cU47ueKz3twp4Et48qJoPFux2Z6y7bDZ EOS6PGpv1vuLrsDxwjrz7cU47ueKz3twp4Et48qJoPFux2Z6y7bDZ
@@ -70,18 +70,25 @@ cleos create account eosio eosbp11 EOS7SG6NNg3jeVJdqEeV2RACEiruW5AFEZx4ChCmDGSYd
 cleos create account eosio eosbp12 EOS7Xpa3YCn8YQmCpabGc3L2ungqaqaQkrwDDDvP6ExebDAC25Agd EOS7Xpa3YCn8YQmCpabGc3L2ungqaqaQkrwDDDvP6ExebDAC25Agd
 cleos create account eosio eosstore EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk 
 cleos create account eosio eosio.token EOS6LuHe5T9GcXP4ZbDND1z1yp6qU3uw84AhU6ohYUWExTmgBZEGW EOS6LuHe5T9GcXP4ZbDND1z1yp6qU3uw84AhU6ohYUWExTmgBZEGW
+cleos create account eosio voter1 EOS5LtzLC7pU7HH16DZvnD5sbp2KdTX1HQ8usgx4qucx4rzRk6U79 EOS5LtzLC7pU7HH16DZvnD5sbp2KdTX1HQ8usgx4qucx4rzRk6U79
+cleos create account eosio voter2 EOS8PvjvhimDWFyH1py4mgvnLBkRi2533RSCUxRZkhZaX3bFRifLj EOS8PvjvhimDWFyH1py4mgvnLBkRi2533RSCUxRZkhZaX3bFRifLj
 
-Step 6:添加token合约
+
+Step 6: 添加eosio.token合约并生成初始EOS货币
 cleos set contract eosio.token /usr/local/bin/data-dir/contracts/eosio.token
 cleos push action eosio.token create '[ "eosio", "1000000000.0000 EOS", 0, 0, 0]' -p eosio.token
 
-Step 7: Issue token to users and get balance.
+Step 7: 发行货币
 cleos push action eosio.token issue '[ "eosbp1", "1000000.0000 EOS", "memo" ]' -p eosio
 cleos push action eosio.token issue '[ "eosbp2", "1000000.0000 EOS", "memo" ]' -p eosio
 cleos push action eosio.token issue '[ "eosbp3", "1000000.0000 EOS", "memo" ]' -p eosio
 cleos push action eosio.token issue '[ "eosbp4", "1000000.0000 EOS", "memo" ]' -p eosio
-
+cleos push action eosio.token issue '[ "voter1", "200000000.0000 EOS", "memo" ]' -p eosio
+cleos push action eosio.token issue '[ "voter2", "200000000.0000 EOS", "memo" ]' -p eosio
 cleos get  currency balance eosio.token eosbp1 EOS
+
+Step 8: 添加eosio.system合约
+cleos set contract eosio /usr/local/bin/data-dir/contracts/eosio.system
 
 ```
 
@@ -138,8 +145,46 @@ cleos system regproducer ${producer_name} ${public_key}
 ```
 
 
-### 激活BP
+### 给BP投票
 ```
+#列出BPC
+cleos system listproducers
+
+#voter 购买权益
+cleos push action eosio delegatebw '{"from":"voter1","receiver":"voter1","stake_net_quantity":"10000000 EOS","stake_cpu_quantity":"10000000 EOS","stake_storage_quantity":"0 EOS"}' -p voter1
+
+
+cleos system buyram voter1 voter1 "1 EOS"
+
+cleos system delegatebw --transfer voter1 voter1 "100000000 EOS" "100000000 EOS"
+
+
+
+cleos push action eosio delegatebw '{"from":"voter","receiver":"voter","stake_net_quantity":"23.0000 EOS","stake_cpu_quantity":"20.0000 EOS","stake_storage_quantity":"1.0000 EOS"}' -p voter
+cleos push action eosio voteproducer '["voter", "", ["producer1"]]' -p voter
+#cleos system voteproducer prods voter producer1 -p voter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 cleos push action eosio setprods \
 "{ \"version\": 1, \"producers\": [ \
 {\"producer_name\": \"eosio\",\"block_signing_key\": \"EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV\"}, \
