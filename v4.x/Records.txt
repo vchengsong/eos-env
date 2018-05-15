@@ -1,0 +1,57 @@
+
+## default wallet password -- node1
+"PW5Ki7t6rjipUEYY8fSsFMpip4or9QZt1z1VYLFXvt4KjYmeHGQ8z"
+
+
+## default wallet password -- node2
+"PW5KhwWhDu46sgVFTHBa4Sc3BNAmYF6JZwYSkjfuaw6JXy9Exopmc"
+
+## default wallet password -- node3
+"PW5KLTJdvRWvCjFBJPKT7ukPXJAdXuSpQUwW9Xugz8R99Pyc1hxie"
+
+
+
+eosbp1
+Private key: 5Hpv9p4krLHRfzMaRtiP2wUuSJx5QErPx1xyVWRddTCDkemH5kK
+Public key: EOS6LQ6sGUDNYH35opPHwA1sdw8rjtN9s1ZpF1zA8mgHZQ2xoAgk8
+
+eosbp2
+Private key: 5JtRPPPceNvu1hCkXXoANxtCL3VJK1mYNqy82xJTHpvYRPK5dJm
+Public key: EOS6PGpv1vuLrsDxwjrz7cU47ueKz3twp4Et48qJoPFux2Z6y7bDZ
+
+eosbp3
+Private key: 5HvZaSEkvwsWPa11sD7FbEdjiHodo7BvG75c7v9NYHj458hhaLy
+Public key: EOS7Gn3L4Pf7oUgqdaXPKg7SEDAkxiYNntmf83CGHS1Bq5sZfpcft
+
+eosbp4
+Private key: 5JoGyPJwmqubeGcxhavL8mvF2EchHztaN9PvPUPjv3JRjTPUXV4
+Public key: EOS7AiMrgd2d9nDK7cFk4JbJH14UWb8EHTbYGZig1tJzTANa7zEAH
+
+eosbp5
+Private key: 5JHdqY4H4rBuAFMcpHP7SE8PjwV2N3c1SuAoKyxNSmyqsfAR6fG
+Public key: EOS6CbwnyzEmMvEXkHgScE7poZRBhM68Ls5Wf5gunhwo5uWMqXs8q
+
+eosbp11
+Private key: 5KPX51GaCTJF6D28L9MXH4Ct8QgA1jm2KxNb1b4ALV9w2d6JywL
+Public key: EOS7SG6NNg3jeVJdqEeV2RACEiruW5AFEZx4ChCmDGSYdB56Jrsdc
+
+eosbp12
+Private key: 5HtdWjARtxWcjidGPRHmerAjg7pTB7Go3TctiBWebsKjrVTwYYy
+Public key: EOS7Xpa3YCn8YQmCpabGc3L2ungqaqaQkrwDDDvP6ExebDAC25Agd
+
+eosbp13
+Private key: 5J9jJLpXMADMYZji6z7yybXe8m7PfN4ueJotB7eoZYvUKbekvzs
+Public key: EOS5Gv4CbXFBwdvn7vm8Qh6J4X2xZnph1DmQMbFfXofhP8zzfS4Q7
+
+
+eostore
+Private key: 5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC
+Public key: EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk
+
+eosio.token
+Private key: 5JQKEf9ZVTAGt29KWqdfww8Mr65NUNQ7Y9S2zaomNa7Q3BtnwB4
+Public key: EOS6LuHe5T9GcXP4ZbDND1z1yp6qU3uw84AhU6ohYUWExTmgBZEGW
+
+
+eosio
+private-key = ["EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV","5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"]

@@ -19,3 +19,5 @@ Public key: EOS8HyXtXUia42G1bFWxx9ThXx2YzQq5UeeXkYaPkQfMdSUy4aBgq
 eosio.token
 Private key: 5JQKEf9ZVTAGt29KWqdfww8Mr65NUNQ7Y9S2zaomNa7Q3BtnwB4
 Public key: EOS6LuHe5T9GcXP4ZbDND1z1yp6qU3uw84AhU6ohYUWExTmgBZEGW
+
+
