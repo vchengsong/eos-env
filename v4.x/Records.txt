@@ -44,7 +44,7 @@ Private key: 5J9jJLpXMADMYZji6z7yybXe8m7PfN4ueJotB7eoZYvUKbekvzs
 Public key: EOS5Gv4CbXFBwdvn7vm8Qh6J4X2xZnph1DmQMbFfXofhP8zzfS4Q7
 
 
-eosstore
+eos.store
 Private key: 5HwKSKA5QfNgAae3WtRt4oW7EV1gzkjA5jd18qj5M1Wp65BdZhC
 Public key: EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk
 
