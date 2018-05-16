@@ -18,7 +18,7 @@ docker cp tmp:/opt/eosio/bin  eosio
 
 # 在相应主机上创建eosio目录，然后cp到对应的主机
 ssh song@172.16.182.133 mkdir ~/eosio
-scp -r -P 22 eosio/bin/* song@172.16.182.133:~/eosio 
+scp -r -P 22 eosio/bin/* root@172.16.182.133:~/eosio 
 
 # 进入各个主机将程序cp到执行目录
 sudo cp -r ~/eosio/* /usr/local/bin
