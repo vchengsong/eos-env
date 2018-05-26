@@ -77,4 +77,49 @@ tail -f /data/eosio.log
 
 ```
 
+### 监控内容
+攻击前要准备的事项
 
+1. 主服务器禁止外网ip， 只能通过NLB的ip访问外网
+2. NLB的ip只开放9876端口，关闭所有其他端口
+3. shield等级升为adv级别
+4. 现场演示更换NLB的EIP（验证一下）
+5. 实时观察攻击流量和防护流量
+
+
+事项：
+尽早购买大服务器
+
+
+
+监控：
+1. 内网ping主机，查看延时
+
+Shield监控
+NLB监控
+主机cpu、网络、内存监控
+出块监控
+
+
+
+3个节点的出块情况
+ping 172.30.100.105
+for i in `seq 1000000`;do check_tcp -H 172.30.100.105 -p 9871 && sleep 1;done
+
+
+
+
+
+
+
+
+user11
+pub:EOS5W7K3wxqgffH2q65XXkGRMPNa3CF9Nmp5DedbGECq5AVE3w1xo 
+pri:5KD7BgKvFyd3FzRx5BLN7AXLCkGDYC8m4BFedrDMhTpA3zRG4RE
+
+cleos -u http://13.251.3.82 system delegatebw --transfer user11 user11 "990 EOS" "1 EOS"
+
+cleos -u http://13.251.3.82 system voteproducer prods user11 eos.store
+
+
+2.156e+23

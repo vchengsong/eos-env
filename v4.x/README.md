@@ -10,6 +10,7 @@
 ### 从docker镜像cp出程序，并上传到需要部署的服务器
 ``` bash
 docker run --rm -it --name tmp eosio/eos:dawn-v4.0.0 bash -c "cp -r /contracts /opt/eosio/bin/data-dir && bash"
+docker run --rm -it --name tmp eosio/eos:latest bash -c "cp -r /contracts /opt/eosio/bin/data-dir && bash"
 
 
 # 在另一个shell中执行
@@ -19,6 +20,10 @@ docker cp tmp:/opt/eosio/bin  eosio
 # 在相应主机上创建eosio目录，然后cp到对应的主机
 ssh song@172.16.182.133 mkdir ~/eosio
 scp -r -P 22 eosio/bin/* root@172.16.182.133:~/eosio 
+
+# 远程主机之间互相复制
+scp -r -P 22 ~/eosio/bin/* root@172.16.182.133:~/eosio 
+
 
 # 进入各个主机将程序cp到执行目录
 sudo cp -r ~/eosio/* /usr/local/bin

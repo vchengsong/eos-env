@@ -1,0 +1,58 @@
+{
+  "producer_account_name": "eosstore2018",
+  "producer_public_key": "EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk",
+  "org": {
+    "candidate_name": "EOS Store",
+    "website": "https://www.eos.store",
+    "code_of_conduct":"",
+    "email":"",
+    "branding":{
+      "logo_256":"",
+      "logo_1024":"",
+      "logo_svg":""
+    },
+    "location": {
+      "name": "beijing",
+      "country": "china",
+      "latitude": 0,
+      "longitude": 0
+    },
+    "social": {
+      "steemit": "",
+      "twitter": "",
+      "youtube": "",
+      "facebook": "",
+      "github":"https://github.com/eosstore",
+      "reddit": "",
+      "keybase": "https://keybase.io/vchengsong",
+      "telegram": "",
+      "wechat":""
+    }
+  },
+  "nodes": [
+    {
+      "location": {
+        "name": "",
+        "country": "",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    },
+    {
+      "location": {
+        "name": "",
+        "country": "",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "is_producer": true,
+      "p2p_endpoint": "",
+      "api_endpoint": "",
+      "ssl_endpoint": ""
+    }
+  ]
+}

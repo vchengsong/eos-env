@@ -1,0 +1,14 @@
+
+#Wireguard
+[Peer]
+PublicKey = 2KPt7wWBfb8w4NgmYSvOn/93qooCOQHCXl39wU9l+Cw=
+AllowedIPs = 192.168.100.90/32
+Endpoint = 52.74.251.4:5555
+PersistentKeepAlive = 20
+
+#EOS
+[EOS]
+p2p-peer-address = 192.168.100.90:5555
+peer-key = EOS6pB118BPnUySPhojFkwrQ8Kz8sQLqQc41BCcJzvQsK2Wq5X3Dk
+
+
