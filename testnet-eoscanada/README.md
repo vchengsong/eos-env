@@ -1,6 +1,53 @@
 
 
 
+#### 步骤
+```bash
+
+#1 
+cd tmp
+wget https://github.com/eoscanada/eos-bios/releases/download/v0.9.0/eos-bios_0.9.0_linux_x86_64.tar.gz
+tar -zxf eos-bios_0.9.0_linux_x86_64.tar.gz
+mv eos-bios /usr/local/bin
+
+
+#2
+
+git clone https://github.com/eoscanada/eos-bios
+cd eos-bios && cp -r sample_config /opt
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 
 
 
